@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // TODO: remove
+        STPPaymentConfiguration.sharedConfiguration().publishableKey = "pk_test_DhW2G4j13BMRIC7gd55hZeW3"
+
         let rootVC = BrowseProductsViewController()
         let navigationController = UINavigationController(rootViewController: rootVC)
         let window = UIWindow()
